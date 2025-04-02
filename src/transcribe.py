@@ -57,7 +57,8 @@ def transcribe(
         Subtitles={
             "Formats": ["srt"],
             "OutputStartIndex": 1
-        }
+        },
+        LanguageOptions=['en-US', 'uk-UA']
     )
 
     while True:
