@@ -47,7 +47,7 @@ def transcribe(
     logger.info("Starting transcription job.")
     response = transcribe_client.start_transcription_job(
         TranscriptionJobName=video_path.stem,
-        LanguageCode="en-US",
+        IdentifyLanguage=True,
         MediaFormat="mp3",
         Media={
             "MediaFileUri": f"s3://{bucket}/{video_path.stem}.mp3",
